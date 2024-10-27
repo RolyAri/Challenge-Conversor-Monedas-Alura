@@ -20,7 +20,7 @@ public class Moneda {
 
     public Map<String, Double> getConversionValor() throws IOException, InterruptedException {
         Gson gson = new GsonBuilder().create();
-        String direccion = "https://v6.exchangerate-api.com/v6/43c2f64edb4936b3c7ace11b/latest/USD";
+        String direccion = "https://v6.exchangerate-api.com/v6/43c2f64edb4936b3c7ace11b/latest/"+nombre;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(direccion))
